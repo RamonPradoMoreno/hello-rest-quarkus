@@ -47,14 +47,18 @@ docker pull rpardom/simple_rest:jvm
 ```
 
 You may want to push it to your own repo:
+1. Build the image:
+   ```bash
+   docker build -f src/main/docker/Dockerfile.native -t simple_rest:native .
+   ```
 
-1. Retag the image with your repo prefix:
+2. Retag the image with your repo prefix:
 
    ```bash
    docker tag simple_rest:wildfly rpardom/simple_rest:native
    ```
 
-2. Push it to the repo:
+3. Push it to the repo:
 
    ```
    docker push rpardom/simple_rest:native
